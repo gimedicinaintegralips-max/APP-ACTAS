@@ -28,7 +28,7 @@ if not API_KEY:
     st.stop()
 
 genai.configure(api_key=API_KEY)
-model = genai.GenerativeModel('gemini-2.5-flash')
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 TEMPLATES_DIR = "templates"
 LIMITE_CONTADOR =4   # <-- límite máximo antes de enviar alerta
@@ -361,3 +361,4 @@ if generar:
         st.error("No se pudo extraer información del texto.")
 
 st.markdown("<div class='footer'>© 2025 Generador de Actas • Streamlit + Gemini + JSONBin</div>", unsafe_allow_html=True)
+
